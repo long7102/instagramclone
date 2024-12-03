@@ -32,7 +32,7 @@ const SidebarItems = [
   {
     icon: (
       <Avatar className="h-6 w-6">
-        <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+        <AvatarImage src={user?.profilePicture} alt="@shadcn" />
         <AvatarFallback>CN</AvatarFallback>
       </Avatar>
     ),
@@ -63,7 +63,7 @@ const LeftSidebar = () => {
 
   const logoutHandler = async () => {
     try {
-      const res = await axios.get("http://localhost:8000/api/v1/user/logout", {
+      const res = await axios.get("https://instagramclone-8sw9.onrender.com/api/v1/user/logout", {
         withCredentials: true,
       });
       if (res.data.success) {
@@ -140,7 +140,7 @@ const LeftSidebar = () => {
               <PopoverContent>
                 <div className="p-2 max-w-sm">
                   {likeNotification.length === 0 ? (
-                    
+
                     <p className="text-sm text-gray-500">
                       Chưa có thông báo mới
                     </p>
