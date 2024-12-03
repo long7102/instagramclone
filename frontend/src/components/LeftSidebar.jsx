@@ -22,24 +22,6 @@ import CreatePost from "./CreatePost";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 
 
-const SidebarItems = [
-  { icon: <Home />, text: "Trang chủ" },
-  { icon: <Search />, text: "Tìm kiếm" },
-  { icon: <LucideCompass />, text: "Khám phá" },
-  { icon: <MessageCircle />, text: "Hộp thư" },
-  { icon: <Heart />, text: "Thông báo" },
-  { icon: <PlusSquare />, text: "Tạo mới" },
-  {
-    icon: (
-      <Avatar className="h-6 w-6">
-        <AvatarImage src={user?.profilePicture} alt="@shadcn" />
-        <AvatarFallback>CN</AvatarFallback>
-      </Avatar>
-    ),
-    text: "Trang cá nhân",
-  },
-  { icon: <LogOut />, text: "Đăng xuất" },
-];
 
 const LeftSidebar = () => {
   const navigate = useNavigate();
@@ -92,6 +74,25 @@ const LeftSidebar = () => {
     }
   };
 
+  
+const SidebarItems = [
+  { icon: <Home />, text: "Trang chủ" },
+  { icon: <Search />, text: "Tìm kiếm" },
+  { icon: <LucideCompass />, text: "Khám phá" },
+  { icon: <MessageCircle />, text: "Hộp thư" },
+  { icon: <Heart />, text: "Thông báo" },
+  { icon: <PlusSquare />, text: "Tạo mới" },
+  {
+    icon: (
+      <Avatar className="h-6 w-6">
+        <AvatarImage src={user?.profilePicture} alt="@shadcn" />
+        <AvatarFallback>CN</AvatarFallback>
+      </Avatar>
+    ),
+    text: "Trang cá nhân",
+  },
+  { icon: <LogOut />, text: "Đăng xuất" },
+];
   return (
     <div
       className={`fixed z-10 bg-white border-gray-300 transition-all ${isMobile
